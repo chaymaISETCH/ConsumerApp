@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html 
+    
+      xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="utf-8"/>
+ 
+    <title>My Spring Boot Application</title>
+</head>
+<body>
+   	<a href="http://localhost:9095/add">ADD </a>
+
+   <table border="1">
+   	<tr>
+   	<th>ID</th>
+   		<th>Label</th>
+   		<th>Stock Min</th>
+   		<th>Quantité</th>
+   		<th>Prix</th>
+   		   		<th>EDIT</th>
+   		   		   		<th>DELETE</th>
+   		
+   	<tr th:each="p: ${produits}">
+   		<td th:text="${p.id}">
+   		ID
+   	</td>
+   	<td th:text="${p.label}">
+   		label
+   	</td>
+   	<td th:text="${p.stockMin}">
+   		stockMin
+   	</td><td th:text="${p.qte}">
+   		qte
+   	</td>
+   	<td th:text="${p.prix}">
+   		prix
+   	</td>
+   	   	<td>
+   	<a th:href="@{'http://localhost:9095/editProduit/'+${p.id}}">EDIT</a>
+
+   	
+   	</td>
+   		   	<td>
+   	<a th:href="@{'http://localhost:9095/deleteProduit/'+${p.id}}">DELETE</a>
+
+   	
+   	</td>
+	</tr>
+   </table>
+   
+   
+</body>
+</html>

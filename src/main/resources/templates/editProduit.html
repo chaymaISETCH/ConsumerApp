@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html 
+    
+      xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="utf-8"/>
+ 
+    <title>My Spring Boot Application</title>
+</head>
+<body>
+	<form th:action="@{/edit}" th:object="${produit}" style="display:block;margin:auto">
+		<input type="hidden"  th:field="*{id}" name="label" placeholder="label" />
+		<br />
+		<input type="text" th:value="${produit.label}"  name="label" placeholder="label" />
+		<br />
+		<input type="number" th:value="${produit.stockMin}"   name="stockMin" placeholder="stockMin" />
+		<br />
+		<input type="number" th:value="${produit.qte}"   name="qte" placeholder="qte" />
+		<br />
+		<input type="number" th:value="${produit.prix}"   name="prix" placeholder="prix" />
+		<br />
+		<input type="submit"   />
+	</form>  
+</body>
+</html>

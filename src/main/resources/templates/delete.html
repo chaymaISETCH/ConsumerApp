@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html 
+    
+      xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="utf-8"/>
+ 
+    <title>My Spring Boot Application</title>
+</head>
+<body>
+<form method="post" th:action="@{/deleteProduit}">
+	<input type="text" name="id" placeholder="product to delete" />
+	<input type="submit"   />
+</form>  
+</body>
+</html>

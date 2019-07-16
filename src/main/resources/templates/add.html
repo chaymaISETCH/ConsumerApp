@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html 
+    
+      xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="utf-8"/>
+ 
+    <title>Produits</title>
+</head>
+<body>
+	<form method="post" th:action="@{/addProduit}" style="display:block;margin:auto">
+		<input type="text" name="label" placeholder="label" />
+		<br />
+		<input type="text"  name="stockMin" placeholder="stockMin" />
+		<br />
+		<input type="text" name="qte" placeholder="qte" />
+		<br />
+		<input type="text" name="prix" placeholder="Prix" />
+		<br />
+		<input type="submit"   />
+	</form>  
+</body>
+</html>
